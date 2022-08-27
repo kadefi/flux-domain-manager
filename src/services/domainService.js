@@ -329,7 +329,8 @@ function getCustomConfigs(specifications) {
     headers: false,
     loadBalance: false,
     healthcheck: [],
-    serverConfig: ''
+    serverConfig: '',
+    enableH2: false,
   };
 
   const customConfigs = {
@@ -351,6 +352,9 @@ function getCustomConfigs(specifications) {
     '33952.wp.wordpressonflux': {
       headers: ['http-request add-header X-Forwarded-Proto https'],
     },
+    "35000.KadefiMoneyDevAPI.KadefiMoneyDevAPI": {
+      enableH2: true,
+    }
   };
 
   let mainPort = '';
